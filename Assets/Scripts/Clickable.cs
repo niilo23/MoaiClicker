@@ -42,6 +42,6 @@ public class Clickable : MonoBehaviour
     {
         moaiAmount = moaiAmount + i;
 
-        Analytics.CustomEvent("addedMoais");
+        Analytics.CustomEvent("Times Clicker Clicked");
     }
 }
