@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Advertisements;
+using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
 public class AdScript : MonoBehaviour
@@ -9,23 +10,27 @@ public class AdScript : MonoBehaviour
     string gameId = "4031997";
     bool TestMode = true;
 
-    //int secBtwAds = Random.Range(240, 420); // 4 minutes and 7 minutes in seconds respectively
     float counter = 0.0f;
     int secBtwAds;
 
-    // Start is called before the first frame update
+    float rewardCounter;
+    int timeTillAvailable = 300;
+    public Button rewardButton;
+    public Text rewButtonText;
+    public GameObject gameManager;
+
     void Start()
     {
         //Debug.Log(secBtwAds);
         secBtwAds = Random.Range(240, 420);
         Advertisement.Initialize(gameId, true);
+
+        rewardButton.interactable = false;
+        rewButtonText.color = Color.clear;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
-
         if (counter < secBtwAds)
         {
             counter += Time.deltaTime;
@@ -36,6 +41,17 @@ public class AdScript : MonoBehaviour
 
             counter = 0;
             ChangeRN();
+        }
+
+        if (rewardCounter < timeTillAvailable)
+        {
+            rewardCounter += Time.deltaTime;
+        }
+        else
+        {
+            rewardCounter = timeTillAvailable;
+            rewardButton.interactable = true;
+            rewButtonText.color = Color.white;
         }
 
         if (Input.GetKeyDown(KeyCode.K))
@@ -56,6 +72,12 @@ public class AdScript : MonoBehaviour
 
     public void AdReward()
     {
+        gameManager.GetComponent<Clickable>().AddMoais(100);
+        Advertisement.Show();
 
+        rewardButton.interactable = false;
+        rewButtonText.color = Color.clear;
+
+        rewardCounter = 0;
     }
 }
