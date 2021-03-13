@@ -14,9 +14,10 @@ public class AdScript : MonoBehaviour
     int secBtwAds;
 
     float rewardCounter;
-    int timeTillAvailable = 300;
+    int timeTillAvailable = 100;
     public Button rewardButton;
     public Text rewButtonText;
+    public Text rewButtonTimeRemaining;
     public GameObject gameManager;
 
     void Start()
@@ -49,7 +50,6 @@ public class AdScript : MonoBehaviour
         }
         else
         {
-            rewardCounter = timeTillAvailable;
             rewardButton.interactable = true;
             rewButtonText.color = Color.white;
         }
@@ -58,6 +58,10 @@ public class AdScript : MonoBehaviour
         {
             Debug.Log(secBtwAds);
         }
+
+        rewButtonTimeRemaining.text = "Time Remaining: " + (Mathf.Round(timeTillAvailable - rewardCounter)) + "s";
+
+        
     }
 
     void ChangeRN()

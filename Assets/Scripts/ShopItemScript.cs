@@ -12,7 +12,7 @@ public class ShopItemScript : MonoBehaviour
 
     public GameObject Controller;
 
-    private List<int> itemAmount = new List<int>();
+    public List<int> itemAmount = new List<int>();
 
     public float priceMultiplier; // Multiplies price of item so player cant buy infinite amount of it.
 
@@ -22,6 +22,11 @@ public class ShopItemScript : MonoBehaviour
 
     public float updateTime = 10;
     float counter;
+
+    /*void Start()
+    {
+        LoadShop();
+    }*/
 
     void Update()
     {
@@ -47,6 +52,7 @@ public class ShopItemScript : MonoBehaviour
             amountOf++;
             Controller.GetComponent<Clickable>().AddMoais(-priceOfItem);
             itemAmount.Add(1);
+            
 
             priceOfItem = priceOfItem * priceMultiplier;
         }
@@ -55,5 +61,19 @@ public class ShopItemScript : MonoBehaviour
             Debug.Log("Not enough moais to buy");
             Debug.Log(moais);
         }
+
+    }
+
+    public void SaveShop()
+    {
+        SaveSystem.SaveShop(this);
+    }
+
+    public void LoadShop()
+    {
+        ShopData data = SaveSystem.LoadShop();
+
+        amountOf = data.amount;
+        itemAmount = data.amountOfItems;
     }
 }
