@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -233,8 +233,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 803.79004, y: 304.651}
-  m_SizeDelta: {x: 506.72705, y: 113.642914}
+  m_AnchoredPosition: {x: 673, y: 160}
+  m_SizeDelta: {x: 413.97424, y: 122.30168}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &95307044
 MonoBehaviour:
@@ -587,8 +587,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 803.79004, y: 488.83}
-  m_SizeDelta: {x: 506.72705, y: 113.642914}
+  m_AnchoredPosition: {x: 673, y: 358.2}
+  m_SizeDelta: {x: 413.97424, y: 122.30168}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &186457839
 MonoBehaviour:
@@ -822,8 +822,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 803.79004, y: 133.83002}
-  m_SizeDelta: {x: 506.72705, y: 113.642914}
+  m_AnchoredPosition: {x: 673, y: -23.899994}
+  m_SizeDelta: {x: 413.97424, y: 122.30168}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &228201509
 MonoBehaviour:
@@ -2087,8 +2087,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 803.79004, y: 668.23}
-  m_SizeDelta: {x: 506.72705, y: 113.642914}
+  m_AnchoredPosition: {x: 673, y: 551.30005}
+  m_SizeDelta: {x: 413.97424, y: 122.30168}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1132930912
 MonoBehaviour:
@@ -3112,7 +3112,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -2475, y: -0.69994}
+  m_AnchoredPosition: {x: -1689, y: -0.69994}
   m_SizeDelta: {x: 237.63858, y: 237.63858}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1909475646
